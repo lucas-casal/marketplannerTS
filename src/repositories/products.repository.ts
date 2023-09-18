@@ -28,7 +28,7 @@ const update = async (infos: Array<string | number>) => {
 }
 
 const remove = async (id: number) => {
-    return (await db.query(`DELETE products WHERE id=$1;`, [id]))
+    return (await db.query(`DELETE FROM products WHERE id=$1;`, [id]))
 }
 
 
